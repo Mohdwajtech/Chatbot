@@ -104,13 +104,13 @@ def getattributes(uinput,context,attributes):
         return attributes, uinput
     else:
         #Code can be optimised here, loading the same files each time suboptimal 
-        files = os.listdir('./entities/')
+        files = os.listdir('Entities/')
         entities = {}
         for fil in files: 
             if(fil==".ipynb_checkpoints"):
                 continue
             else:
-                lines = open('./entities/'+fil).readlines()
+                lines = open('Entities/'+fil).readlines()
                 for i, line in enumerate(lines):
                     lines[i] = line[:-1]
                 entities[fil[:-4]] = '|'.join(lines)
