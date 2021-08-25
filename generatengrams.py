@@ -53,7 +53,7 @@ def score(uinput, tngramsdict):
 
 def init():
     ngramsdict = {}
-    path = './intents/'
+    path = 'Intents/'
 
     for fil in os.listdir(path):
         if fil.endswith('.dat'):
